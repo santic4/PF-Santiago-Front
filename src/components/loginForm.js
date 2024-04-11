@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/cartContext';
 
-
 export const Login = () => {
   const [loginData, setLoginData] = useState({
     username: '',
@@ -9,36 +8,34 @@ export const Login = () => {
   });
   const { loginContext, adminLogin } = useContext(CartContext);
 
-  const login = (loginData) => {
- fetch('https://api49980.onrender.com/api/session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      credentials: 'include', 
-      body: JSON.stringify(loginData)
-    })
-    .then(response => {
+  const login = async (loginData) => {
+    try {
+      const response = await fetch('https://api49980.onrender.com/api/session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+        body: JSON.stringify(loginData)
+      });
+
       if (!response.ok) {
         throw new Error('Error al iniciar sesión');
       }
+
+      const data = await response.json();
+      const username = data.payload.username;
+      console.log(username, 'Inicio de sesión exitoso');
       
-      return response.json(); 
-    })
-    .then(data => {
-      const username = data.payload.username; 
-    
-      console.log(username, 'Inicio de sesión exitoso',);
-      if(data.payload.rol === 'admin'){
-        adminLogin()
+      if (data.payload.rol === 'admin') {
+        adminLogin();
       }
-   
-      loginContext()
+
+      loginContext();
       window.location.href = '/';
-    })
-    .catch(error => {
+    } catch (error) {
       console.error('Error:', error);
-    });
+    }
   };
 
   const handleChange = (e) => {
@@ -52,7 +49,6 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(loginData);
-    
   };
 
   return (
