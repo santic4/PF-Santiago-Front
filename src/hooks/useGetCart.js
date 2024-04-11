@@ -11,7 +11,7 @@ const useGetCartById = () => {
     setCartData(null);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/carts/${cartId}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/carts/${cartId}`, {
         method: 'GET',
         credentials: 'include'
       });

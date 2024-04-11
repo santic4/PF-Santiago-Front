@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
     const fetchCart = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/session/current', {
+        const response = await fetch('https://api49980.onrender.com/api/session/current', {
           method: 'GET',
           credentials: 'include',
           headers: {
@@ -70,7 +70,7 @@ export const CartProvider = ({ children }) => {
       setLoading(true);
       try {
         if(cartID){
-          const response = await fetch(`http://localhost:8080/api/carts/${cartID}`, {
+          const response = await fetch(`https://api49980.onrender.com/api/carts/${cartID}`, {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -103,7 +103,7 @@ export const CartProvider = ({ children }) => {
     setLoading(true);
     try {
       if(cartID){
-        const response = await fetch(`http://localhost:8080/api/carts/${cartID}/add/${productID}`, {
+        const response = await fetch(`https://api49980.onrender.com/api/carts/${cartID}/add/${productID}`, {
           method: 'PUT',
           credentials: 'include',
           headers: {
@@ -142,7 +142,7 @@ export const CartProvider = ({ children }) => {
     setLoading(true);
     try {
       if(cartID){
-        const response = await fetch(`http://localhost:8080/api/carts/${cartID}/product/${productID}`, {
+        const response = await fetch(`https://api49980.onrender.com/api/carts/${cartID}/product/${productID}`, {
           method: 'DELETE',
           credentials: 'include',
           headers: {
@@ -173,7 +173,7 @@ export const CartProvider = ({ children }) => {
       throw new Error('userId no existe ')
     }
     try {
-        const response = await fetch(`http://localhost:8080/api/carts/`, {
+        const response = await fetch(`https://api49980.onrender.com/api/carts/`, {
           method: 'POST',
           credentials: 'include',
           headers: {
@@ -199,7 +199,7 @@ export const CartProvider = ({ children }) => {
     setLoading(true);
     try {
       if(cartID){
-        const response = await fetch(`http://localhost:8080/api/carts/${cartID}/product/${productID}`, {
+        const response = await fetch(`https://api49980.onrender.com/api/carts/${cartID}/product/${productID}`, {
           method: 'PUT',
           credentials: 'include',
           headers: {

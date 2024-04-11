@@ -28,7 +28,7 @@ const FileUploadForm = () => {
       formData.append('address_proof', addressProofFile);
       formData.append('bank_statement', bankStatementFile);
 
-      const response = await fetch('http://localhost:8080/api/users/current/documents', {
+      const response = await fetch('https://api49980.onrender.com/api/users/current/documents', {
         method: 'POST',
         body: formData,
         credentials: 'include'

@@ -8,7 +8,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/users', {
+        const response = await fetch('https://api49980.onrender.com/api/users', {
             method: 'GET',
             credentials: 'include'
         });
@@ -27,7 +27,7 @@ const AdminPanel = () => {
 
   const changeUserRole = async (uid, newRole) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/users/premium/${uid}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/users/premium/${uid}`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -60,7 +60,7 @@ const AdminPanel = () => {
 
   const deleteUser = async (uid) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/users/delete/${uid}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/users/delete/${uid}`, {
         method: 'DELETE',
         credentials: 'include'
       });

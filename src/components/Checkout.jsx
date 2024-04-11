@@ -10,7 +10,7 @@ const Checkout = () => {
     const purchaseCart = async () => {
       try {
         setLoading(true)
-        const response = await fetch(`http://localhost:8080/api/carts/${cartId}/purchase`, {
+        const response = await fetch(`https://api49980.onrender.com/api/carts/${cartId}/purchase`, {
           method: 'POST',
           credentials: 'include'
         });

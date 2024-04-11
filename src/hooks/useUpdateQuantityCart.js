@@ -9,7 +9,7 @@ const useUpdateCartItem = () => {
     setError(null);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/carts/${cartId}/product/${productId}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/carts/${cartId}/product/${productId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

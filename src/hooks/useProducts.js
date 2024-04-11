@@ -6,9 +6,9 @@ export const useProducts = (selectedCategory) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let url = 'http://localhost:8080/api/products';
+        let url = 'https://api49980.onrender.com/api/products';
         if (selectedCategory) {
-          url = `http://localhost:8080/api/products/category?category=${selectedCategory}`;
+          url = `https://api49980.onrender.com/api/products/category?category=${selectedCategory}`;
         }
 
         const response = await fetch(url);

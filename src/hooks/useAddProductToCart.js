@@ -13,7 +13,7 @@ const useAddProductToCart = () => {
 
     try {
       const cartID = localStorage.getItem("carrito");
-      const response = await fetch(`http://localhost:8080/api/carts/${cartID}/add/${productID}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/carts/${cartID}/add/${productID}`, {
         method: 'PUT',
         credentials: 'include'
       });

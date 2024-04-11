@@ -11,7 +11,7 @@ const useDeleteProductInCart = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/products/carts/${cartId}/product/${productId}`, {
+      const response = await fetch(`https://api49980.onrender.com/api/products/carts/${cartId}/product/${productId}`, {
         method: 'DELETE',
         credentials: 'include'
       });

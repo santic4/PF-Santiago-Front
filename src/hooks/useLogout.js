@@ -11,7 +11,7 @@ const useLogout = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8080/api/session/current', {
+      const response = await fetch('https://api49980.onrender.com/api/session/current', {
         method: 'DELETE',
         credentials: 'include'
       });

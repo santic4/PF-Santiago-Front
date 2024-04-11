@@ -11,7 +11,7 @@ function useProductById(productId) {
     const fetchProductById = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:8080/api/products/${productId}`);
+        const response = await fetch(`https://api49980.onrender.com/api/products/${productId}`);
         console.log(response,'response')
         if (!response.ok) {
           throw new Error('No se pudo obtener el producto');

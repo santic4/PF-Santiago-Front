@@ -16,7 +16,7 @@ export const CreateUserForm = () => {
 
   const createUserData = async (userData) => {
     try {
-      const response = await fetch('http://localhost:8080/api/users', {
+      const response = await fetch('https://api49980.onrender.com/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

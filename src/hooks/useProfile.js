@@ -7,7 +7,7 @@ const useProfile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/session/current', {
+        const response = await fetch('https://api49980.onrender.com/api/session/current', {
           method: 'GET',
           credentials: 'include'
         });
