@@ -10,7 +10,7 @@ export const Login = () => {
   const { loginContext, adminLogin } = useContext(CartContext);
 
   const login = (loginData) => {
- fetch('http://localhost:8080/api/session', {
+ fetch('https://api49980.onrender.com/api/session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
