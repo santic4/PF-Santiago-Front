@@ -1,0 +1,23 @@
+.padreCards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 80px;
+    gap: 25px;
+   color: black;
+}
+
+@media screen and (max-width:780px) {
+    .padreCards{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:595px){
+    .padreCards{
+        justify-content: space-around;
+        margin: 0 10px;
+      }
+
+  }

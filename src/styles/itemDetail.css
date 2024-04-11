@@ -1,0 +1,85 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .tituloCarrito {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .ItemDetail {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .ItemDetail img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ItemDetail h2 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #ff6600;
+  }
+  
+  .ItemDetail h6 {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .ItemDetail p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contador {
+    text-align: center;
+  }
+  
+  .finish,
+  .finish:hover {
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .finish:hover {
+    background-color: #cc5500;
+  }
+  
+  .btns{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 20px;
+    
+  }
+  
+  .btnSeguir{
+    background-color: #0daa34;
+  }
+  
+  .btnSeguir:hover {
+    background-color: #00c400;
+  }
