@@ -32,7 +32,7 @@ export const Login = () => {
       }
 
       loginContext();
-      window.location.href = '/';
+  
     } catch (error) {
       console.error('Error:', error);
     }
