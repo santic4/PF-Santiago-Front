@@ -43,6 +43,7 @@ export const CartProvider = ({ children }) => {
             'Content-Type': 'application/json'
           }
         });
+        console.log(await response.json(),'RESPONSE CURRENT')
         if (!response.ok) {
           throw new Error('No se pudo acceder a la seccion');
         }
